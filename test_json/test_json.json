@@ -1,0 +1,161 @@
+{
+    "count": 85851,
+    "next": "http://localhost:8000/api/v1/titles/?page=2",
+    "previous": null,
+    "results": [
+        {
+            "id": 9,
+            "url": "http://localhost:8000/api/v1/titles/9",
+            "imdb_url": "https://www.imdb.com/title/tt0000009/",
+            "title": "Miss Jerry",
+            "year": 1894,
+            "imdb_score": "6.0",
+            "votes": 154,
+            "image_url": "https://m.media-amazon.com/images/M/MV5BNjA5Y2ZhYzctNDc1Yy00OGViLWI3NGUtOTYwZmE3NDFiYmIxXkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_UY268_CR72,0,182,268_AL_.jpg",
+            "directors": [
+                "Alexander Black"
+            ],
+            "actors": [
+                "Blanche Bayliss",
+                "Chauncey Depew",
+                "William Courtenay"
+            ],
+            "writers": [
+                "Alexander Black"
+            ],
+            "genres": [
+                "Romance"
+            ]
+        },
+        {
+            "id": 574,
+            "url": "http://localhost:8000/api/v1/titles/574",
+            "imdb_url": "https://www.imdb.com/title/tt0000574/",
+            "title": "The Story of the Kelly Gang",
+            "year": 1906,
+            "imdb_score": "6.1",
+            "votes": 605,
+            "image_url": "https://m.media-amazon.com/images/M/MV5BNTY4ZDk5MzYtNjk2Zi00ZWY3LTgwZjUtNDc5MWEzMWFlOTQzXkEyXkFqcGdeQXVyNjU1MTEwMjI@._V1_UY268_CR1,0,182,268_AL_.jpg",
+            "directors": [
+                "Charles Tait"
+            ],
+            "actors": [
+                "Bella Cola",
+                "Elizabeth Tait",
+                "Frank Mills",
+                "Jack Ennis",
+                "John Forde",
+                "John Tait",
+                "Mr. Marshall",
+                "Mr. McKenzie",
+                "Norman Campbell",
+                "Ollie Wilson",
+                "Sam Crewes",
+                "Vera Linden",
+                "Will Coyne"
+            ],
+            "writers": [
+                "Charles Tait"
+            ],
+            "genres": [
+                "Biography",
+                "Crime",
+                "Drama"
+            ]
+        },
+        {
+            "id": 1892,
+            "url": "http://localhost:8000/api/v1/titles/1892",
+            "imdb_url": "https://www.imdb.com/title/tt0001892/",
+            "title": "Den sorte drøm",
+            "year": 1911,
+            "imdb_score": "5.8",
+            "votes": 190,
+            "image_url": "https://m.media-amazon.com/images/M/MV5BNWVkNjUyYjUtZGU1Yi00YTM4LTg5ZGEtYmNlNDAzNWRjODM2XkEyXkFqcGdeQXVyMzE0MjY5ODA@._V1_UY268_CR7,0,182,268_AL_.jpg",
+            "directors": [
+                "Urban Gad"
+            ],
+            "actors": [
+                "Asta Nielsen",
+                "Emil Albes",
+                "Gunnar Helsengreen",
+                "Hugo Flink",
+                "Mary Hagen",
+                "Valdemar Psilander"
+            ],
+            "writers": [
+                "Gebhard Schätzler-Perasini",
+                "Urban Gad"
+            ],
+            "genres": [
+                "Drama"
+            ]
+        },
+        {
+            "id": 2101,
+            "url": "http://localhost:8000/api/v1/titles/2101",
+            "imdb_url": "https://www.imdb.com/title/tt0002101/",
+            "title": "Cleopatra",
+            "year": 1912,
+            "imdb_score": "5.1",
+            "votes": 454,
+            "image_url": "https://m.media-amazon.com/images/M/MV5BZTcyMGU4ZmYtYTVmYS00NWFkLWExM2MtYWRlYTlhOWYxNjYwXkEyXkFqcGdeQXVyMzE0MjY5ODA@._V1_UY268_CR7,0,182,268_AL_.jpg",
+            "directors": [
+                "Charles L. Gaskill"
+            ],
+            "actors": [
+                "Charles Sindelar",
+                "Harry Knowles",
+                "Helen Gardner",
+                "Helene Costello",
+                "James R. Waite",
+                "Miss Fielding",
+                "Miss Robson",
+                "Mr. Brady",
+                "Mr. Corker",
+                "Mr. Howard",
+                "Mr. Osborne",
+                "Mr. Paul",
+                "Pearl Sindelar"
+            ],
+            "writers": [
+                "Victorien Sardou"
+            ],
+            "genres": [
+                "Drama",
+                "History"
+            ]
+        },
+        {
+            "id": 2130,
+            "url": "http://localhost:8000/api/v1/titles/2130",
+            "imdb_url": "https://www.imdb.com/title/tt0002130/",
+            "title": "L'Inferno",
+            "year": 1911,
+            "imdb_score": "7.1",
+            "votes": 2308,
+            "image_url": "https://m.media-amazon.com/images/M/MV5BNjU1NDMyNGEtODJkYy00M2Y4LTk5YzItYTYxMzkzZWI1MmJiXkEyXkFqcGdeQXVyMzI5NDcxNzI@._V1_UY268_CR5,0,182,268_AL_.jpg",
+            "directors": [
+                "Adolfo Padovan",
+                "Francesco Bertolini"
+            ],
+            "actors": [
+                "Arturo Pirovano",
+                "Attilio Motta",
+                "Augusto Milla",
+                "Emilise Beretta",
+                "Giuseppe de Liguoro",
+                "Pier Delle Vigne",
+                "Salvatore Papa"
+            ],
+            "writers": [
+                "Dante Alighieri"
+            ],
+            "genres": [
+                "Adventure",
+                "Drama",
+                "Fantasy"
+            ]
+        }
+    ]
+}
