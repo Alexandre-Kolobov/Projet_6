@@ -1,32 +1,35 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>JustStreamIt</title>
-    <link href="style.css" rel="stylesheet">
-</head>
-<body>
-    <header>
-        <img src="test_image/jsi_logo.png" alt="Logo JustStreamIt" />
-        <!-- <h1>JustStreamIt</h1> -->
-        <nav>
-            <a href="index.html">Accueil</a>
-            <a href="index.html">Catégories</a>
-        </nav>
-    </header>
+    <head>
+        <meta charset="UTF-8">
+        <title>JustStreamIt</title>
+        <link href="style.css" rel="stylesheet">
+        <!-- Style google font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <nav class="header">
+                <img class="header__logo" src="test_image/jsi_logo.png" alt="Logo JustStreamIt" />
+                <div class="header__links">
+                    <ul>
+                        <li><a class="header__linkHome" href="index.html">Accueil</a></li>
+                        <li><a class="header__linkCategory" href="index.html">Catégories</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
 
-    <main>
-        <section>
-            <h2>Titre du meilleur film</h2>
-            <img src="test_image/pic1.jpg" alt="Image du meilleur film" />
-            <input type="button" value="More info">
-        </section>
-
-        <section>
-            <h2>Films les mieux notés</h2>
-            <img src=" " alt="Image du meilleur film" />
-            <input type="button" value="More info">
-        </section>
-    </main>
-</body>
+        <main>  
+            <section>
+                <div class="BestFilm">
+                    <h1 classe="BestFilm__titre">Titre du meilleur film</h2>
+                    <button class="BestFilm__moreInfo">More info</button>
+                    <img class="BestFilm__image" src="test_image/pic1.jpg" alt="Image du meilleur film" />
+                </div>
+            </section>
+        </main>
+    </body>
 </html>
