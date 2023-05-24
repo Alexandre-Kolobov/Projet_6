@@ -73,3 +73,64 @@ li a:hover {
     text-overflow: ellipsis;
     white-space: nowrap;
 }
+
+.carousel-container {
+    width: 95%;
+    margin: 50px auto;
+    background-color: rgb(69, 84, 73);
+    position: relative;
+}
+
+
+.carousel-container .carousel-inner {
+    /* display: flex; */
+    overflow: hidden;
+    /* flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px; */
+}
+
+.carousel-container .carousel-inner .track {
+    /* border: 1px solid black; */
+    display: flex;
+    /* overflow: hidden; */
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    transition: transform 0.3s;
+    flex-shrink: 0;
+    
+
+}
+
+.carousel-container .card-container {
+    flex-basis: 450px;
+}
+
+.carousel-container .card-container .card{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+
+.nav button{
+    border-radius: 50%;
+    width: 5em;
+    height: 5em;
+    border: 1px solid black;
+    position: absolute;
+    top: 40%;
+    cursor: pointer;
+}
+
+.nav .prev {
+    left: -30px;
+}
+
+.nav .next {
+    right: -30px;
+}
