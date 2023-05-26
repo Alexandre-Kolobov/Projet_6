@@ -6,6 +6,10 @@
 header {
     background-color: rgb(69, 84, 73);
     width: 100%;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+    border: 5px solid black;
 }
 
 nav {
