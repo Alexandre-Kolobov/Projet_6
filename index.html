@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <title>JustStreamIt</title>
         <link href="style.css" rel="stylesheet">
+        <link href="styleCategory0.css" rel="stylesheet"> 
         <link href="styleCategory1.css" rel="stylesheet">
         <link href="styleCategory2.css" rel="stylesheet">
         <link href="styleCategory3.css" rel="stylesheet">
@@ -43,13 +44,39 @@
             <section>
                 <div class="bestFilmParameters">
                     <h1>Top film:</h1>
-                    <button class="bestFilmParameters__moreInfo">More info</button>
                     <!-- <img class="bestFilmParameters__image" src="test_image/pic1.jpg" alt="Image du meilleur film" /> -->
-                    <!-- <h1 class="bestFilmParameters__titre">Titre du meilleur film test</h1> -->     
+                    <!-- <h1 class="bestFilmParameters__titre">Titre du meilleur film test</h1> --> 
+
+                     <!-- Trigger/Open The Modal -->
+                     <button id="bestFilmParameters__moreInfo">More info</button>
+
+                    <!-- The Modal -->
+                    <div id="bestFilmParameters__modal" class="modal">
+                        <!-- Modal content -->
+                        <div class="bestFilmParameters__modal-content">
+                            <!-- Ajouter un croix pour fermer -->
+                            <span class="close">&times;</span> 
+                            
+                        </div>
+                    </div> 
                 </div>
             </section>
 
            <section>
+            <div class="filmCategory0">
+                <div class="filmCategory0__carouselContainer"></div>
+
+                <div class="category0_btns">
+                    <button class="category0_btns__prevBtn">
+                        <span class="material-symbols-outlined">arrow_back_ios</span>
+                    </button>
+                    <button class="category0_btns__nextBtn">
+                        <span class="material-symbols-outlined">arrow_forward_ios</span>
+                    </button>
+                </div>
+                </div>
+            </div>
+
                 <div class="filmCategory1">
                     <div class="filmCategory1__carouselContainer">
                         <!-- <div class="carouselContainer__card">
@@ -68,8 +95,6 @@
                             <span class="material-symbols-outlined">arrow_forward_ios</span>
                         </button>
                     </div>
-                    
-                    <!-- <h1>TEST</h1> -->
                 </div>
 
                 <div class="filmCategory2">
@@ -97,6 +122,8 @@
                         </button>
                     </div>
                 </div>
+
+
            </section>
         </main>
     </body>
