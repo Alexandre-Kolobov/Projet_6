@@ -138,7 +138,7 @@ async function getBestFilmsByCategory(category, nombre_films, categoryHtml){
     dictUrl = await getUrl(category);
     console.log(dictUrl);
 
-    const divCategory = document.querySelector(`.film${categoryHtml}`);
+    const divCategory = document.querySelector(`.divfilm${categoryHtml}`);
     const categoryName = document.createElement("h1");
     // categoryName.innerText = category;
     categoryName.innerText = dictUrl["category"];

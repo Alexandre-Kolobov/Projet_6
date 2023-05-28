@@ -80,7 +80,7 @@ li a:hover {
     text-align: center
 }
 
-/* .filmCategory1 {
+[class*="divfilmCategory"]{
     width: 1100px;
     height: 400px;
     margin: 50px auto;
@@ -93,19 +93,19 @@ li a:hover {
     
 }
 
-.filmCategory1 h1 {
+[class*="divfilmCategory"] h1 {
     position: absolute;
     top: -4%;
 
 }
 
-
-.filmCategory1__carouselContainer {
+[class$="__carouselContainer"] {
     display: flex;
     width: 1080px;
+    /* background-color: rgb(163, 32, 71); */
     overflow: hidden;
     scroll-behavior: smooth;
-} */
+}
 
 .carouselContainer__card {
     min-height: 350px;
@@ -148,7 +148,7 @@ li a:hover {
     text-align: center;
 }
 
-/* .category1_btns button{
+[class$="_btns"] button{
     border-radius: 50%;
     width: 5em;
     height: 5em;
@@ -158,13 +158,13 @@ li a:hover {
     cursor: pointer;
 }
 
-.category1_btns__prevBtn {
+[class$="__prevBtn"] {
     left: -30px;
 }
 
-.category1_btns__nextBtn {
+[class$="__nextBtn"] {
     right: -30px;
-} */
+}
 
  /* The Modal (background) */
  .modal {
