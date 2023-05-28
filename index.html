@@ -4,10 +4,6 @@
         <meta charset="UTF-8">
         <title>JustStreamIt</title>
         <link href="style.css" rel="stylesheet">
-        <link href="styleCategory0.css" rel="stylesheet"> 
-        <!-- <link href="styleCategory1.css" rel="stylesheet">
-        <link href="styleCategory2.css" rel="stylesheet">
-        <link href="styleCategory3.css" rel="stylesheet"> -->
 
         <!-- Style google font -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,7 +30,7 @@
                 <div class="header__links">
                     <ul>
                         <li><a class="header__linkHome" href="index.html">Accueil</a></li>
-                        <li><a class="header__linkCategory" href="index.html">Catégories</a></li>
+                        <li><a class="header__linkCategory" href="#categories">Catégories</a></li>
                     </ul>
                 </div>
             </nav>
@@ -48,19 +44,21 @@
                     <!-- <h1 class="bestFilmParameters__titre">Titre du meilleur film test</h1> --> 
 
                      <!-- Trigger/Open The Modal -->
-                     <button id="bestFilmParameters__moreInfo">More info</button>
+                     <button class="best__moreInfo">More info</button>
 
-                    <!-- The Modal -->
-                    <div id="bestFilmParameters__modal" class="modal">
-                        <!-- Modal content -->
-                        <div class="bestFilmParameters__modal-content">
-                            <!-- Ajouter un croix pour fermer -->
+   
+                    <!-- <div class="modal">
+      
+                        <div class="best__modal-content">
+
                             <span class="close">&times;</span> 
-                            
                         </div>
-                    </div> 
+                    </div>  -->
                 </div>
+                <div id="categories"></div>
             </section>
+
+
 
            <section>
                 <div class="divfilmCategory0">
@@ -73,7 +71,12 @@
                         <button class="category0_btns__nextBtn">
                             <span class="material-symbols-outlined">arrow_forward_ios</span>
                         </button>
-                    </div>
+
+                        <!-- <div class="modal">
+                            <div class="category0__modal-content">
+                                <span class="close">&times;</span> 
+                            </div>
+                        </div>  -->
                     </div>
                 </div>
 
@@ -95,6 +98,7 @@
                             <span class="material-symbols-outlined">arrow_forward_ios</span>
                         </button>
                     </div>
+
                 </div>
 
                 <div class="divfilmCategory2">
@@ -108,6 +112,7 @@
                             <span class="material-symbols-outlined">arrow_forward_ios</span>
                         </button>
                     </div>
+
                 </div>
 
                 <div class="divfilmCategory3">

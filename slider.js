@@ -4,7 +4,6 @@ async function getPageInfos(url){
     const reponse = await fetch(url);
     const reponseJsObject = await reponse.json();
     // let reponseJson = JSON.stringify(reponseJsObject);
-    // console.log(reponseJson);
     return reponseJsObject;
 };
 
@@ -13,7 +12,6 @@ async function getBestFilmByScore(){
     const url = "http://localhost:8000/api/v1/titles/?sort_by=-imdb_score";
     
     let pageInfos = await getPageInfos(url);
-    console.log(pageInfos)
 
     const sectionBestFilm = document.querySelector(".bestFilmParameters");
 
@@ -28,7 +26,7 @@ async function getBestFilmByScore(){
     sectionBestFilm.appendChild(bestFilmImg);
     sectionBestFilm.appendChild(bestFilmTitre);
 
-    addModalBestFilm(pageInfos.results[0]);
+    addModal("best", pageInfos.results[0].id)
 
 };
 
@@ -45,40 +43,86 @@ async function getUrl(category){
     };
 };
 
-async function addModalBestFilm(pageInfo){
-    // Get the modal
-    var modal = document.getElementById("bestFilmParameters__modal");
 
-    // Get the button that opens the modal
-    var btn = document.getElementById("bestFilmParameters__moreInfo");
+async function addModal(categoryHtml, filmId){
 
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
+    let addModalHere;
+    let modal;
+    let modalContent;
+    let close;
+    let moreInfo;
 
-    // When the user clicks on the button, open the modal
-    btn.onclick = function() {
+    if (categoryHtml === "best"){
+        addModalHere = document.querySelector(`.bestFilmParameters`);
+        
+        modal = document.createElement("div");
+        modal.className = `modal${filmId}`;
+
+        modalContent = document.createElement("div");
+        modalContent.className = `${categoryHtml.toLowerCase()}__modal-content`;
+
+        close = document.createElement("span");
+        close.className = "close";
+        close.innerHTML = "&times;";
+
+        moreInfo = document.querySelector(`.best__moreInfo`);
+
+
+    }else{
+        addModalHere = document.querySelector(`.carouselContainer__card${filmId}`);
+        
+        modal = document.createElement("div");
+        modal.className = `modal${filmId}`;
+
+        modalContent = document.createElement("div");
+        modalContent.className = `${categoryHtml.toLowerCase()}__modal-content`;
+
+        close = document.createElement("span");
+        close.className = "close";
+        close.innerHTML = "&times;"
+
+        moreInfo = document.querySelector(`.carouselContainer__card${filmId} .${categoryHtml}__moreInfo`);
+    };
+
+    addModalHere.appendChild(modal);
+    modal.appendChild(modalContent);
+    modalContent.appendChild(close);
+
+    // // Get the button that opens the modal
+    
+
+    
+
+    // // Get the <span> element that closes the modal
+    // let span = document.querySelector(`.carouselContainer__card${filmId} .close`);
+
+    // // When the user clicks on the button, open the modal
+    moreInfo.onclick = function() {
         modal.style.display = "block";
-    }
+    };
 
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function() {
+    // // When the user clicks on <span> (x), close the modal
+    close.onclick = function() {
         modal.style.display = "none";
-    }
+    };
 
-    // When the user clicks anywhere outside of the modal, close it
+    let testmodal = document.querySelectorAll("[class^=modal]")
+    console.log(testmodal)
+    
     window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    }
-    let filmId = pageInfo.id
+        testmodal.forEach((element) => {
+            if (event.target == element) {
+                element.style.display = "none";
+            };
+        });
+    };
+
 
     const url = `http://localhost:8000/api/v1/titles/${filmId}`;
 
     let filmInformation = await getPageInfos(url);
-    console.log(filmInformation);
 
-    const modalContent = document.querySelector(".bestFilmParameters__modal-content");
+    // const modalContent = document.querySelector(".best__modal-content");
     const filmImg = document.createElement("img");
     filmImg.src = filmInformation.image_url;
     filmImg.alt = `img: ${filmInformation.title}`;
@@ -116,7 +160,6 @@ async function addModalBestFilm(pageInfo){
     const modalText__description = document.createElement("p");
     modalText__description.innerText = `Résumé du film: ${filmInformation.description ?? "N/A"}`;
     
-
     modalContent.appendChild(filmImg);
     modalContent.appendChild(modalText__titre);
     modalContent.appendChild(modalText__genres);
@@ -129,14 +172,12 @@ async function addModalBestFilm(pageInfo){
     modalContent.appendChild(modalText__country);
     modalContent.appendChild(modalText__boxOffice);
     modalContent.appendChild(modalText__description);
-
-
 };
 
 async function getBestFilmsByCategory(category, nombre_films, categoryHtml){
     let dictUrl = []
     dictUrl = await getUrl(category);
-    console.log(dictUrl);
+
 
     const divCategory = document.querySelector(`.divfilm${categoryHtml}`);
     const categoryName = document.createElement("h1");
@@ -146,7 +187,6 @@ async function getBestFilmsByCategory(category, nombre_films, categoryHtml){
     divCategory.appendChild(categoryName);
     
     // let pageInfos = await getPageInfos(url);
-    console.log(dictUrl.url)
     let pageInfos = await getPageInfos(dictUrl["url"]);
 
     let films = [];
@@ -170,7 +210,7 @@ async function getBestFilmsByCategory(category, nombre_films, categoryHtml){
         for (let i = 0; i < nombre_films; i++) {
 
             const divCard = document.createElement("div");
-            divCard.className ="carouselContainer__card";
+            divCard.className =(`carouselContainer__card${films[i].id}`);
 
             const divCardImage = document.createElement("div");
             divCardImage.className ="card__image";
@@ -178,15 +218,18 @@ async function getBestFilmsByCategory(category, nombre_films, categoryHtml){
             const filmImg = document.createElement("img");
             filmImg.src = films[i].image_url;
             filmImg.alt = `img: ${films[i].title}`;
+            filmImg.className = `${categoryHtml}__moreInfo`;
 
             const filmTitre = document.createElement("div");
-            filmTitre.className ="card__titre"
+            filmTitre.className ="card__titre";
             filmTitre.innerText = films[i].title;
 
             sectionCategory.appendChild(divCard);
             divCard.appendChild(divCardImage);
             divCardImage.appendChild(filmImg);
             divCard.appendChild(filmTitre);
+            
+            addModal(categoryHtml, films[i].id);
         };
 
 
@@ -213,7 +256,3 @@ getBestFilmsByCategory("",7,"Category0");
 getBestFilmsByCategory("Action",7,"Category1");
 getBestFilmsByCategory("Adventure",7,"Category2");
 getBestFilmsByCategory("Animation",7,"Category3");
-
-
-
-

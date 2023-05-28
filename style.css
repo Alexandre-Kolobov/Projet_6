@@ -60,10 +60,11 @@ li a:hover {
     border: 5px solid black;
 }
 
-#bestFilmParameters__moreInfo {
+.best__moreInfo {
     border-radius: 10px;
     position: relative;
     bottom: -450px; 
+    cursor: pointer;
 }
 
 .bestFilmParameters__titre {
@@ -78,6 +79,10 @@ li a:hover {
     text-overflow: ellipsis;
     white-space: nowrap;
     text-align: center
+}
+
+#categories {
+    height: 150px;
 }
 
 [class*="divfilmCategory"]{
@@ -107,7 +112,8 @@ li a:hover {
     scroll-behavior: smooth;
 }
 
-.carouselContainer__card {
+/* .carouselContainer__card */
+[class*="carouselContainer__card"] {
     min-height: 350px;
     max-height: 350px;
     min-width: 250px;
@@ -136,8 +142,12 @@ li a:hover {
 
 .card__image img {
     border-radius: 10px; 
+    cursor: pointer;
 }
 
+.card__image img:hover {
+    opacity: 0.5;
+  }
 
 .card__titre{
     /* border: 1px solid black; */
@@ -167,7 +177,8 @@ li a:hover {
 }
 
  /* The Modal (background) */
- .modal {
+ /* .modal  */
+ [class^="modal"]{
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
@@ -176,12 +187,12 @@ li a:hover {
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
   }
   
   /* Modal Content/Box */
-  .bestFilmParameters__modal-content {
+  /* .best__modal-content */
+  [class$="__modal-content"] {
     background-color: #fefefe;
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
@@ -189,7 +200,7 @@ li a:hover {
     width: 80%; /* Could be more or less, depending on screen size */
   }
 
-  .bestFilmParameters__modal-content img{
+  [class$="__modal-content"] img{
     float: left;
     width: 20%;
     margin: 20px;
