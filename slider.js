@@ -238,14 +238,28 @@ async function getBestFilmsByCategory(category, nombre_films, categoryHtml){
 
         const filmCategory__carouselContainer = document.querySelector(`.film${categoryHtml}__carouselContainer`);
 
+        // let x = window.matchMedia("(max-width: 1200px)")
 
-        prev.addEventListener("click", () => {
-            filmCategory__carouselContainer.scrollLeft -= 270
-        });
+        // if (x.matches) { // If media query matches
+            prev.addEventListener("click", () => {
+                filmCategory__carouselContainer.scrollLeft -= filmCategory__carouselContainer.offsetWidth
+            });
+    
+            next.addEventListener("click", () => {
+                filmCategory__carouselContainer.scrollLeft += filmCategory__carouselContainer.offsetWidth
+            });
+        //   } else {
+        //     prev.addEventListener("click", () => {
+        //         filmCategory__carouselContainer.scrollLeft -= 270
+        //     });
+    
+        //     next.addEventListener("click", () => {
+        //         filmCategory__carouselContainer.scrollLeft += 270
+        //     });
+        //   };
+        
 
-        next.addEventListener("click", () => {
-            filmCategory__carouselContainer.scrollLeft += 270
-        });
+
 
 };
 

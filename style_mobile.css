@@ -1,0 +1,140 @@
+@media screen and (max-width: 1200px) {
+
+
+    body {
+        min-width: 100%;
+        box-sizing: border-box;
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    header {
+        width: 100%;
+        border: 1px solid black;
+    }
+
+    .header__logo {
+        margin: 50px;
+        width: 15em;
+    }
+
+    li a {
+        margin: auto;
+        font-size: 5.0em;
+    }
+    
+    li a:hover {
+        display: none;
+    } 
+
+    .bestFilmParameters__image {
+        width: 40em;
+        border-radius: 50px;
+    }
+
+    .best__moreInfo {
+        border-radius: 10px;
+        bottom: -900px; 
+        font-size: 3em;
+
+    }
+  
+    .bestFilmParameters__titre {
+        font-size: 3em;
+        bottom: 350px;
+    }
+
+    h1 {
+        font-size: 3em;
+        margin: 0;
+    }
+
+
+    [class*="divfilmCategory"]{
+        
+        height: 1000px;
+        max-width: 75%;
+        margin: 100px auto;
+    }
+
+    [class*="divfilmCategory"] h1 {
+        position: absolute;
+        top: 3%;
+        
+    
+    }
+
+    [class$="__carouselContainer"] {
+        width: 100%;
+        height: 800px;
+    }
+
+    [class*="carouselContainer__card"] {
+        min-width: 90%;
+        margin: 5%;
+        min-height: 750px;
+        
+    }
+
+    .card__image {
+        /* border: 1px solid black; */
+        height: 700px;
+        /* border: 15px solid black; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50em;
+        max-width: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+        
+        
+    }
+
+    .card__image img {
+        border-radius: 10px; 
+        cursor: pointer;
+        width: 50%;
+    }
+
+    .card__titre{
+        /* border: 22px solid black; */
+        display: block;
+        height: 50px;
+        max-width: 70%;
+        font-size: 2.5em;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    [class^="modal"]{
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+      }
+      
+      /* Modal Content/Box */
+      /* .best__modal-content */
+      [class$="__modal-content"] {
+        width: 90%; /* Could be more or less, depending on screen size */
+        overflow: scroll;
+        font-size: 3em;
+      }
+
+      [class$="__modal-content"] img{
+        float: none;
+        width: 90%;
+        margin: 20px;
+      }
+      
+      /* The Close Button */
+      .close {
+        font-size: 5em;
+      }
+    
+      [class$="_btns"] button{
+        border-radius: 0%;
+        height: 20em;
+    }
+}

@@ -1,6 +1,7 @@
 * {
     /* border: 1px solid black; */
     font-family: 'Poppins', sans-serif;
+    
 }
 
 header {
@@ -84,6 +85,11 @@ li a:hover {
 #categories {
     height: 150px;
 }
+
+#bestfilm {
+    height: 150px;
+}
+
 
 [class*="divfilmCategory"]{
     width: 1100px;
