@@ -61,6 +61,10 @@ li a:hover {
     border: 5px solid black;
 }
 
+.bestFilmParameters__image:hover {
+    opacity: 0.5;
+  }
+
 .best__moreInfo {
     border-radius: 10px;
     position: relative;

@@ -3,7 +3,8 @@
 async function getPageInfos(url){
     const reponse = await fetch(url);
     const reponseJsObject = await reponse.json();
-    // let reponseJson = JSON.stringify(reponseJsObject);
+    // let reponseJsonTest = JSON.stringify(reponseJsObject);
+    // console.log(reponseJsonTest)
     return reponseJsObject;
 };
 
@@ -12,6 +13,7 @@ async function getBestFilmByScore(){
     const url = "http://localhost:8000/api/v1/titles/?sort_by=-imdb_score";
     
     let pageInfos = await getPageInfos(url);
+    // console.log(pageInfos)
 
     const sectionBestFilm = document.querySelector(".bestFilmParameters");
 
@@ -51,6 +53,7 @@ async function addModal(categoryHtml, filmId){
     let modalContent;
     let close;
     let moreInfo;
+    let moreInfoImg;
 
     if (categoryHtml === "best"){
         addModalHere = document.querySelector(`.bestFilmParameters`);
@@ -66,6 +69,11 @@ async function addModal(categoryHtml, filmId){
         close.innerHTML = "&times;";
 
         moreInfo = document.querySelector(`.best__moreInfo`);
+        moreInfoImg = document.querySelector(`.bestFilmParameters__image`);
+
+        moreInfoImg.onclick = function() {
+            modal.style.display = "block";
+        };
 
 
     }else{
@@ -100,6 +108,7 @@ async function addModal(categoryHtml, filmId){
     moreInfo.onclick = function() {
         modal.style.display = "block";
     };
+
 
     // // When the user clicks on <span> (x), close the modal
     close.onclick = function() {
